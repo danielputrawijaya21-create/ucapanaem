@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rahasia Kecil 💗</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #ffd6e7, #ffb6d5, #ffc9df);
+  overflow: hidden;
+}
+
+.cp-card {
+  width: 94%;
+  max-width: 420px;
+  background: rgba(255,255,255,0.88);
+  border-radius: 30px;
+  padding: 32px 26px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(190, 70, 120, 0.25);
+
+  /* sedikit geser ke kanan */
+  transform: translateX(10px);
+
+}
+
+/* CAPYBARA */
+.cp-capy {
+  width: 150px;
+  height: 100px;
+  background: #b97852;
+  border-radius: 50% 48% 45% 45%;
+  margin: 5px auto 20px;
+  position: relative;
+}
+
+.cp-ear {
+  position: absolute;
+  width: 40px;
+  height: 35px;
+  background: #a76545;
+  border-radius: 50%;
+  top: -8px;
+}
+
+.cp-ear.left {
+  left: 15px;
+}
+
+.cp-ear.right {
+  right: 15px;
+}
+
+.cp-eye {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  background: #2d1b16;
+  border-radius: 50%;
+  top: 40px;
+}
+
+.cp-eye.left {
+  left: 48px;
+}
+
+.cp-eye.right {
+  right: 48px;
+}
+
+.cp-nose {
+  position: absolute;
+  width: 25px;
+  height: 17px;
+  background: #3b2118;
+  border-radius: 50%;
+  left: 50%;
+  top: 54px;
+  transform: translateX(-50%);
+}
+
+.cp-mouth {
+  position: absolute;
+  width: 18px;
+  height: 10px;
+  border-bottom: 3px solid #3b2118;
+  border-radius: 50%;
+  left: 50%;
+  top: 65px;
+  transform: translateX(-50%);
+}
+
+.cp-flower {
+  position: absolute;
+  right: -12px;
+  top: 5px;
+  font-size: 32px;
+}
+
+.cp-title {
+  color: #d94c86;
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.cp-sub {
+  color: #9c5674;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.cp-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.cp-dot {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #f5c3d8;
+  transition: 0.2s;
+}
+
+.cp-dot.active {
+  background: #df5d91;
+  transform: scale(1.15);
+}
+
+/* KEYPAD */
+.cp-keys {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.cp-key {
+  border: none;
+  padding: 15px;
+  border-radius: 18px;
+  background: #ffe0ec;
+  color: #b94372;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.15s;
+}
+
+.cp-key:hover {
+  background: #ffc5db;
+}
+
+.cp-key:active {
+  transform: scale(0.92);
+}
+
+.cp-clear {
+  background: #ffd0df;
+}
+
+/* PESAN SALAH */
+.cp-msg {
+  display: none;
+  margin-top: 18px;
+  animation: muncul 0.3s ease;
+}
+
+.cp-error {
+  background: #fff0f5;
+  border: 2px solid #f18bb0;
+  color: #d84c82;
+  border-radius: 18px;
+  padding: 13px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.cp-clue {
+  margin-top: 10px;
+  background: #ffe4ef;
+  border-radius: 15px;
+  padding: 11px;
+  color: #a94d72;
+  font-size: 13px;
+}
+
+.cp-success {
+  display: none;
+  margin-top: 18px;
+  background: #ffe0ed;
+  color: #d5447c;
+  border-radius: 18px;
+  padding: 15px;
+  font-weight: bold;
+  animation: muncul 0.4s ease;
+}
+
+@keyframes muncul {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div id="capy-pin-app">
+
+  <div class="cp-card">
+
+    <div class="cp-capy">
+      <div class="cp-ear left"></div>
+      <div class="cp-ear right"></div>
+
+      <div class="cp-eye left"></div>
+      <div class="cp-eye right"></div>
+
+      <div class="cp-nose"></div>
+      <div class="cp-mouth"></div>
+
+      <div class="cp-flower">🌸</div>
+    </div>
+
+    <div class="cp-title">
+      Rahasia kecil 💗
+    </div>
+
+    <div class="cp-sub">
+      masukkan PIN untuk membuka sesuatu... 🐹
+    </div>
+
+    <div class="cp-dots">
+      <div class="cp-dot"></div>
+      <div class="cp-dot"></div>
+      <div class="cp-dot"></div>
+      <div class="cp-dot"></div>
+      <div class="cp-dot"></div>
+      <div class="cp-dot"></div>
+    </div>
+
+    <div class="cp-keys">
+      <button class="cp-key" data-num="1">1</button>
+      <button class="cp-key" data-num="2">2</button>
+      <button class="cp-key" data-num="3">3</button>
+
+      <button class="cp-key" data-num="4">4</button>
+      <button class="cp-key" data-num="5">5</button>
+      <button class="cp-key" data-num="6">6</button>
+
+      <button class="cp-key" data-num="7">7</button>
+      <button class="cp-key" data-num="8">8</button>
+      <button class="cp-key" data-num="9">9</button>
+
+      <button class="cp-key cp-clear" id="clear">C</button>
+      <button class="cp-key" data-num="0">0</button>
+      <button class="cp-key cp-clear" id="backspace">⌫</button>
+    </div>
+
+    <div class="cp-msg" id="wrongMessage">
+      <div class="cp-error">
+        sala aemmcu sayangg 😭💗
+      </div>
+
+      <div class="cp-clue">
+        <b>clue:</b> bulan, tanggal n tahun lahir kamuu 🫵🏻🐹
+      </div>
+    </div>
+
+    <div class="cp-success" id="successMessage">
+      betull, good girlll💗✨
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+const correctPin = "020512";
+let pin = "";
+
+const dots = document.querySelectorAll(".cp-dot");
+const wrongMessage = document.getElementById("wrongMessage");
+const successMessage = document.getElementById("successMessage");
+
+function updateDots() {
+  dots.forEach((dot, index) => {
+    if (index < pin.length) {
+      dot.classList.add("active");
+    } else {
+      dot.classList.remove("active");
+    }
+  });
+}
+
+function resetMessages() {
+  wrongMessage.style.display = "none";
+  successMessage.style.display = "none";
+}
+
+function checkPin() {
+  if (pin.length !== 6) return;
+
+  setTimeout(() => {
+
+    if (pin === correctPin) {
+
+      successMessage.style.display = "block";
+
+window.location.href = "halaman2.html";
+
+    } else {
+
+      wrongMessage.style.display = "block";
+
+      pin = "";
+      updateDots();
+    }
+
+  }, 220);
+}
+
+document.querySelectorAll(".cp-key[data-num]").forEach(button => {
+
+  button.addEventListener("click", () => {
+
+    if (pin.length >= 6) return;
+
+    pin += button.dataset.num;
+
+    resetMessages();
+    updateDots();
+
+    checkPin();
+  });
+
+});
+
+document.getElementById("clear").addEventListener("click", () => {
+  pin = "";
+  resetMessages();
+  updateDots();
+});
+
+document.getElementById("backspace").addEventListener("click", () => {
+  pin = pin.slice(0, -1);
+  resetMessages();
+  updateDots();
+});
+</script>
+
+</body>
+</html>
