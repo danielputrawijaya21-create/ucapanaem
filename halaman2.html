@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Untuk Kamu 💗</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  min-height:100vh;display:flex;justify-content:center;align-items:center;
+  font-family:Arial,sans-serif;
+  background:linear-gradient(135deg,#ffd6e7,#ffb6d5,#ffc9df);
+  overflow:hidden;padding:20px;
+}
+.card{
+  width:94%;max-width:420px;background:rgba(255,255,255,.9);
+  border-radius:30px;padding:34px 26px;text-align:center;
+  box-shadow:0 15px 40px rgba(190,70,120,.25);
+  animation:masuk .6s ease;
+}
+.capy{
+  width:150px;height:100px;background:#b97852;border-radius:50% 48% 45% 45%;
+  margin:0 auto 22px;position:relative;
+}
+.ear{position:absolute;width:35px;height:35px;background:#a76545;border-radius:50%;top:-8px}
+.ear.left{left:15px}.ear.right{right:15px}
+.eye{position:absolute;width:9px;height:9px;background:#2d1b16;border-radius:50%;top:40px}
+.eye.left{left:48px}.eye.right{right:48px}
+.nose{position:absolute;width:25px;height:17px;background:#3b2118;border-radius:50%;
+left:50%;top:54px;transform:translateX(-50%)}
+.mouth{position:absolute;width:18px;height:10px;border-bottom:3px solid #3b2118;
+border-radius:50%;left:50%;top:65px;transform:translateX(-50%)}
+.flower{position:absolute;right:-12px;top:5px;font-size:32px}
+h1{color:#d94c86;font-size:28px;margin-bottom:12px}
+p{color:#9c5674;font-size:16px;line-height:1.6}
+.heart{font-size:32px;margin:15px 0 5px;animation:denyut 1.3s infinite}
+.small{font-size:13px;color:#b56a89;margin-top:18px}
+.next-btn{
+  display:inline-block;margin-top:22px;padding:13px 25px;border-radius:18px;
+  background:#df5d91;color:white;font-size:15px;font-weight:bold;
+  text-decoration:none;box-shadow:0 7px 18px rgba(190,70,120,.18);
+  transition:.15s;
+}
+.next-btn:active{transform:scale(.95)}
+.next-btn:hover{background:#d94c86}
+@keyframes masuk{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}
+@keyframes denyut{50%{transform:scale(1.15)}}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="capy">
+    <div class="ear left"></div><div class="ear right"></div>
+    <div class="eye left"></div><div class="eye right"></div>
+    <div class="nose"></div><div class="mouth"></div>
+    <div class="flower">🌸</div>
+  </div>
+  <div class="heart">💗</div>
+  <h1>Hehehe, ketebak! 🐹</h1>
+  <p>
+    Selamat datang di halaman kecil yang aku siapin khusus buat kamu.
+    <br><br>
+    Sebenernya masih ada sesuatu lagi...
+    tapi pelan-pelan yaa, jangan buru-buru 🫵🏻💗
+  </p>
+  <div class="small">ada kejutan kecil setelah ini... ✨</div>
+  <a class="next-btn" href="halaman3.html">Lanjut → 💗</a>
+</div>
+</body>
+</html>

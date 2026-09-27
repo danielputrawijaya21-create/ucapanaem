@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>haii, bacaa ini yaaa💗</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      overflow: hidden;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      padding: 20px;
+
+      font-family: "Poppins", Arial, sans-serif;
+
+      background:
+        radial-gradient(circle at 20% 20%, #ffd9e8 0%, transparent 35%),
+        radial-gradient(circle at 80% 80%, #ffc4dc 0%, transparent 35%),
+        linear-gradient(135deg, #fff1f7, #ffd5e6);
+
+      color: #87516a;
+    }
+
+    /* =========================
+       HATI BERTEBARAN
+    ========================== */
+
+    .hearts {
+      position: fixed;
+      inset: 0;
+
+      pointer-events: none;
+      overflow: hidden;
+
+      z-index: 1;
+    }
+
+    .heart {
+      position: absolute;
+
+      bottom: -50px;
+
+      font-size: 20px;
+
+      opacity: 0;
+
+      animation: naik 7s linear infinite;
+    }
+
+    .heart:nth-child(1) {
+      left: 5%;
+      animation-delay: 0s;
+      animation-duration: 6s;
+    }
+
+    .heart:nth-child(2) {
+      left: 15%;
+      animation-delay: 2s;
+      animation-duration: 8s;
+    }
+
+    .heart:nth-child(3) {
+      left: 25%;
+      animation-delay: 1s;
+      animation-duration: 7s;
+    }
+
+    .heart:nth-child(4) {
+      left: 38%;
+      animation-delay: 3s;
+      animation-duration: 9s;
+    }
+
+    .heart:nth-child(5) {
+      left: 50%;
+      animation-delay: 0.5s;
+      animation-duration: 7s;
+    }
+
+    .heart:nth-child(6) {
+      left: 62%;
+      animation-delay: 2.5s;
+      animation-duration: 8s;
+    }
+
+    .heart:nth-child(7) {
+      left: 74%;
+      animation-delay: 1.5s;
+      animation-duration: 6.5s;
+    }
+
+    .heart:nth-child(8) {
+      left: 86%;
+      animation-delay: 4s;
+      animation-duration: 8.5s;
+    }
+
+    .heart:nth-child(9) {
+      left: 95%;
+      animation-delay: 3s;
+      animation-duration: 7s;
+    }
+
+    @keyframes naik {
+
+      0% {
+        transform:
+          translateY(0)
+          rotate(0deg)
+          scale(0.7);
+
+        opacity: 0;
+      }
+
+      10% {
+        opacity: 0.8;
+      }
+
+      50% {
+        transform:
+          translateY(-50vh)
+          translateX(25px)
+          rotate(15deg)
+          scale(1);
+      }
+
+      100% {
+        transform:
+          translateY(-115vh)
+          translateX(-25px)
+          rotate(-15deg)
+          scale(1.2);
+
+        opacity: 0;
+      }
+    }
+
+
+    /* =========================
+       DEKORASI
+    ========================== */
+
+    .decor {
+      position: fixed;
+
+      font-size: 35px;
+
+      z-index: 2;
+
+      animation: goyang 3s ease-in-out infinite;
+    }
+
+    .flower-left {
+      top: 25px;
+      left: 20px;
+    }
+
+    .flower-right {
+      top: 30px;
+      right: 20px;
+
+      animation-delay: 1s;
+    }
+
+    .capybara-left {
+      bottom: 25px;
+      left: 20px;
+
+      font-size: 48px;
+
+      animation-delay: 0.5s;
+    }
+
+    .capybara-right {
+      bottom: 25px;
+      right: 20px;
+
+      font-size: 48px;
+
+      animation-delay: 1.5s;
+    }
+
+    @keyframes goyang {
+
+      0%, 100% {
+        transform: translateY(0) rotate(-5deg);
+      }
+
+      50% {
+        transform: translateY(-8px) rotate(5deg);
+      }
+    }
+
+
+    /* =========================
+       CARD UTAMA
+    ========================== */
+
+    .container {
+      position: relative;
+
+      z-index: 5;
+
+      width: 100%;
+      max-width: 480px;
+
+      padding: 35px 25px;
+
+      text-align: center;
+
+      background: rgba(255, 255, 255, 0.9);
+
+      border-radius: 32px;
+
+      border: 2px solid rgba(255, 255, 255, 0.8);
+
+      box-shadow:
+        0 20px 55px rgba(190, 70, 120, 0.25);
+
+      animation: muncul 1.2s ease;
+    }
+
+    @keyframes muncul {
+
+      from {
+        opacity: 0;
+        transform: translateY(25px) scale(0.95);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+
+    /* =========================
+       JUDUL
+    ========================== */
+
+    .mini-title {
+      font-size: 15px;
+
+      color: #d77a9f;
+
+      margin-bottom: 8px;
+    }
+
+    h1 {
+      font-size: 32px;
+
+      color: #d65388;
+
+      line-height: 1.25;
+
+      margin-bottom: 10px;
+
+      text-shadow:
+        0 4px 12px rgba(214, 83, 136, 0.18);
+    }
+
+    .big-heart {
+      display: inline-block;
+
+      font-size: 45px;
+
+      margin: 8px 0 15px;
+
+      animation: detak 1.2s ease-in-out infinite;
+    }
+
+    @keyframes detak {
+
+      0%, 100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.2);
+      }
+    }
+
+
+    /* =========================
+       PESAN
+    ========================== */
+
+    .message {
+      font-size: 14px;
+
+      line-height: 1.9;
+
+      color: #795466;
+
+      margin-bottom: 15px;
+    }
+
+    .message p {
+      margin-bottom: 12px;
+    }
+
+    .highlight {
+      color: #d65388;
+
+      font-weight: bold;
+    }
+
+
+    /* =========================
+       QUOTE
+    ========================== */
+
+    .quote {
+      margin: 20px 0;
+
+      padding: 17px;
+
+      background: #fff1f6;
+
+      border-radius: 20px;
+
+      border: 1px solid #f4c4d7;
+
+      color: #c45882;
+
+      font-size: 14px;
+
+      line-height: 1.7;
+
+      font-style: italic;
+    }
+
+
+    /* =========================
+       PENUTUP
+    ========================== */
+
+    .ending {
+      font-size: 14px;
+
+      color: #a96883;
+
+      line-height: 1.7;
+
+      margin-top: 15px;
+    }
+
+    .signature {
+      margin-top: 18px;
+
+      color: #d65388;
+
+      font-size: 16px;
+
+      font-weight: bold;
+    }
+
+
+    /* =========================
+       BUTTON
+    ========================== */
+
+    .finish-btn {
+      display: inline-block;
+
+      margin-top: 22px;
+
+      padding: 13px 27px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #f58eb4,
+          #d65388
+        );
+
+      color: white;
+
+      text-decoration: none;
+
+      border-radius: 50px;
+
+      font-size: 14px;
+
+      font-weight: bold;
+
+      box-shadow:
+        0 8px 20px rgba(214, 83, 136, 0.28);
+
+      transition: 0.25s ease;
+    }
+
+    .finish-btn:hover {
+      transform:
+        translateY(-3px)
+        scale(1.03);
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    .footer {
+      margin-top: 18px;
+
+      font-size: 11px;
+
+      color: #c58aa2;
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media (max-width: 480px) {
+
+      body {
+        padding: 15px;
+      }
+
+      .container {
+        padding: 30px 20px;
+
+        border-radius: 28px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      .big-heart {
+        font-size: 40px;
+      }
+
+      .message,
+      .quote,
+      .ending {
+        font-size: 13px;
+      }
+
+      .decor {
+        font-size: 28px;
+      }
+
+      .capybara-left,
+      .capybara-right {
+        font-size: 40px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <!-- =========================
+       HATI BERTEBARAN
+  ========================== -->
+
+  <div class="hearts">
+
+    <div class="heart">💗</div>
+    <div class="heart">💕</div>
+    <div class="heart">💖</div>
+    <div class="heart">💗</div>
+    <div class="heart">💞</div>
+    <div class="heart">💓</div>
+    <div class="heart">💕</div>
+    <div class="heart">💗</div>
+    <div class="heart">💖</div>
+
+  </div>
+
+
+  <!-- =========================
+       DEKORASI
+  ========================== -->
+
+  <div class="decor flower-left">
+    🌷
+  </div>
+
+  <div class="decor flower-right">
+    🌷
+  </div>
+
+  <div class="decor capybara-left">
+    🐹
+  </div>
+
+  <div class="decor capybara-right">
+    🐹
+  </div>
+
+
+  <!-- =========================
+       CARD UTAMA
+  ========================== -->
+
+  <main class="container">
+
+    <div class="mini-title">
+      n finally... 💗
+    </div>
+
+    <h1>
+      short reminder,<br>
+      yang semoga bisaa buat kamu sadarr 🥹
+    </h1>
+
+    <div class="big-heart">
+      💗
+    </div>
+
+
+    <div class="message">
+
+      <p>
+        kaloo kamu sudah sampai di halaman ini,
+        berarti kamu sudah sampai di
+        <span class="highlight">akhir kejutan kecilku.</span>
+      </p>
+
+      <p>
+        maybee aku gabisa ngomong secara langsung
+        jadi akuu bikinn iniiee
+      </p>
+
+      <p>
+        thank u bb sudah menjadi bagian
+        dari hari-hariku. 💕
+      </p>
+
+    </div>
+
+
+    <!-- QUOTE -->
+
+    <div class="quote">
+
+      "banyak hubungan yang berakhir bukan perkara 
+       ego yang bertabrakan, tapi kehabisan sabar buat
+       ngadepin proses pendewasaan pasangannya" 💗
+
+    </div>
+
+
+    <div class="ending">
+
+      kita usahain ga jadi hubungan kaya diatas yaa??
+
+      semoga hari harimu bahagia,
+      semoga tiap langkahmu disertai orang orang baik
+      dan selalu ingat kalau kamu
+      <strong>sangat berarti.</strong> 🌷
+
+      <div class="signature">
+        — dari niell, yang sayang kamu 💗
+      </div>
+
+    </div>
+
+
+    <a
+      href="javascript:void(0)"
+      class="finish-btn"
+      onclick="showFinal()"
+    >
+      can we get hug? 🫂💗
+    </a>
+
+
+    <div class="footer">
+      made with love, just for you 🐹🌷
+    </div>
+
+  </main>
+
+
+  <!-- =========================
+       EFEK AKHIR
+  ========================== -->
+
+  <script>
+
+    function showFinal() {
+
+      // Tambahkan banyak hati sekaligus
+      for (let i = 0; i < 18; i++) {
+
+        const heart = document.createElement("div");
+
+        heart.innerHTML = ["💗", "💕", "💖", "💓"][Math.floor(Math.random() * 4)];
+
+        heart.style.position = "fixed";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.bottom = "-30px";
+        heart.style.fontSize = (18 + Math.random() * 25) + "px";
+        heart.style.zIndex = "20";
+        heart.style.pointerEvents = "none";
+
+        heart.style.animation =
+          `finalHeart ${2 + Math.random() * 2}s ease-out forwards`;
+
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+          heart.remove();
+        }, 4500);
+      }
+
+      // Pesan kecil
+      setTimeout(() => {
+
+        alert(
+          "makasii uda mau bertahan sejauh ini 💗\n\n" +
+          "i love u.. 🐹🌷"
+        );
+
+      }, 800);
+
+    }
+
+
+    // Animasi hati tambahan
+    const style = document.createElement("style");
+
+    style.innerHTML = `
+
+      @keyframes finalHeart {
+
+        0% {
+          transform:
+            translateY(0)
+            scale(0.5)
+            rotate(0deg);
+
+          opacity: 0;
+        }
+
+        15% {
+          opacity: 1;
+        }
+
+        100% {
+          transform:
+            translateY(-110vh)
+            scale(1.4)
+            rotate(25deg);
+
+          opacity: 0;
+        }
+
+      }
+
+    `;
+
+    document.head.appendChild(style);
+
+  </script>
+
+</body>
+</html>

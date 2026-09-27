@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Untuk Kamu 💗</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: "Poppins", Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, #ffdce9 0%, transparent 35%),
+        radial-gradient(circle at bottom right, #ffc5dc 0%, transparent 35%),
+        linear-gradient(135deg, #fff0f6, #ffd6e7);
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      padding: 30px 18px;
+      color: #8b4964;
+
+      overflow-x: hidden;
+    }
+
+    /* =========================
+       DEKORASI
+    ========================== */
+
+    .flower {
+      position: fixed;
+      font-size: 38px;
+      animation: float 3s ease-in-out infinite;
+      z-index: 0;
+    }
+
+    .flower1 {
+      top: 25px;
+      left: 20px;
+    }
+
+    .flower2 {
+      top: 70px;
+      right: 20px;
+      animation-delay: 1s;
+    }
+
+    .flower3 {
+      bottom: 35px;
+      left: 25px;
+      animation-delay: 1.5s;
+    }
+
+    .flower4 {
+      bottom: 20px;
+      right: 25px;
+      animation-delay: 0.5s;
+    }
+
+    .capybara {
+      position: fixed;
+      font-size: 55px;
+      bottom: 70px;
+      right: 15px;
+      animation: bounce 2.5s ease-in-out infinite;
+      z-index: 0;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0) rotate(-5deg);
+      }
+
+      50% {
+        transform: translateY(-10px) rotate(5deg);
+      }
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-12px);
+      }
+    }
+
+    /* =========================
+       CONTAINER
+    ========================== */
+
+    .container {
+      position: relative;
+      z-index: 2;
+
+      width: 100%;
+      max-width: 500px;
+
+      background: rgba(255, 255, 255, 0.88);
+
+      border-radius: 30px;
+
+      padding: 32px 24px;
+
+      box-shadow:
+        0 15px 40px rgba(190, 70, 120, 0.20);
+
+      text-align: center;
+
+      border: 2px solid rgba(255, 255, 255, 0.8);
+    }
+
+    /* =========================
+       JUDUL
+    ========================== */
+
+    .small-title {
+      font-size: 16px;
+      color: #d4779d;
+      margin-bottom: 8px;
+    }
+
+    h1 {
+      font-size: 30px;
+      color: #d65388;
+      margin-bottom: 8px;
+      text-shadow: 0 3px 10px rgba(214, 83, 136, 0.15);
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: #a76580;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+
+    /* =========================
+       NOTE
+    ========================== */
+
+    .note-box {
+      background: #fff7fb;
+
+      border: 2px solid #f7c4d9;
+
+      border-radius: 22px;
+
+      padding: 24px 20px;
+
+      text-align: left;
+
+      box-shadow:
+        0 8px 20px rgba(210, 100, 140, 0.10);
+
+      position: relative;
+    }
+
+    .note-box::before {
+      content: "💗";
+
+      position: absolute;
+
+      top: -15px;
+      right: 20px;
+
+      font-size: 27px;
+
+      background: #fff7fb;
+
+      padding: 3px 7px;
+
+      border-radius: 50%;
+    }
+
+    .note-title {
+      text-align: center;
+
+      font-size: 19px;
+
+      color: #d95b8e;
+
+      margin-bottom: 16px;
+
+      font-weight: bold;
+    }
+
+    .note-text {
+      font-size: 14px;
+
+      line-height: 1.9;
+
+      color: #795466;
+    }
+
+    .note-text p {
+      margin-bottom: 12px;
+    }
+
+    .signature {
+      text-align: right;
+
+      color: #d65b8c;
+
+      font-weight: bold;
+
+      margin-top: 18px;
+    }
+
+    /* =========================
+       MUSIC
+    ========================== */
+
+    .music-box {
+      margin-top: 24px;
+
+      padding: 16px;
+
+      background: #ffe8f1;
+
+      border-radius: 20px;
+
+      border: 1px solid #f5bfd4;
+    }
+
+    .music-title {
+      font-size: 14px;
+
+      color: #c95483;
+
+      margin-bottom: 10px;
+    }
+
+    audio {
+      width: 100%;
+      height: 38px;
+    }
+
+    /* =========================
+       BUTTON
+    ========================== */
+
+    .next-btn {
+      display: inline-block;
+
+      margin-top: 25px;
+
+      padding: 13px 28px;
+
+      background: linear-gradient(
+        135deg,
+        #f58eb4,
+        #d95b8e
+      );
+
+      color: white;
+
+      text-decoration: none;
+
+      border-radius: 50px;
+
+      font-size: 14px;
+
+      font-weight: bold;
+
+      box-shadow:
+        0 8px 18px rgba(214, 83, 136, 0.25);
+
+      transition: 0.25s ease;
+    }
+
+    .next-btn:hover {
+      transform: translateY(-3px) scale(1.03);
+
+      box-shadow:
+        0 12px 22px rgba(214, 83, 136, 0.30);
+    }
+
+    .footer {
+      margin-top: 20px;
+
+      font-size: 12px;
+
+      color: #c4879f;
+    }
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media (max-width: 480px) {
+
+      body {
+        padding: 20px 14px;
+      }
+
+      .container {
+        padding: 28px 19px;
+        border-radius: 26px;
+      }
+
+      h1 {
+        font-size: 27px;
+      }
+
+      .capybara {
+        font-size: 45px;
+        right: 8px;
+        bottom: 55px;
+      }
+
+      .flower {
+        font-size: 30px;
+      }
+
+      .note-box {
+        padding: 21px 17px;
+      }
+
+      .note-text {
+        font-size: 13.5px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Dekorasi -->
+  <div class="flower flower1">🌷</div>
+  <div class="flower flower2">🌷</div>
+  <div class="flower flower3">🌸</div>
+  <div class="flower flower4">🌷</div>
+
+  <div class="capybara">🐹</div>
+
+
+  <!-- Isi utama -->
+  <main class="container">
+
+    <div class="small-title">
+      sedikit sesuatu buat kamu 🌷
+    </div>
+
+    <h1>
+      Satu note kecil 💗
+    </h1>
+
+    <div class="subtitle">
+      buat kamu yang mungkin nggak sadar
+      betapa berharganya kamu ✨
+    </div>
+
+
+    <!-- NOTE -->
+    <section class="note-box">
+
+      <div class="note-title">
+        Untuk kamu 🌸
+      </div>
+
+      <div class="note-text">
+
+        <p>
+          Haiii kamu 🫵🏻💗
+        </p>
+
+        <p>
+          Aku cuma mau bilang makasih karena
+          sudah hadir dan membuat banyak hal
+          sederhana terasa jadi lebih berarti.
+        </p>
+
+        <p>
+          Mungkin note ini kecil,
+          tapi aku bikin dengan perasaan
+          yang nggak kecil. 🥹💗
+        </p>
+
+        <p>
+          Jangan lupa jaga diri,
+          jangan terlalu capek,
+          dan tetap jadi kamu yang lucu itu yaa.
+          🐹🌷
+        </p>
+
+        <p>
+          Semoga setiap kali kamu lihat halaman ini,
+          kamu selalu ingat kalau ada seseorang
+          yang senang banget bisa mengenal kamu. 💗
+        </p>
+
+        <div class="signature">
+          — dari seseorang yang sayang kamu 💗
+        </div>
+
+      </div>
+
+    </section>
+
+
+  <!-- MUSIC -->
+<div class="music-box">
+
+  <div class="music-title">
+    🎵 lagu kecil buat nemenin kamu
+  </div>
+
+  <audio id="music" controls autoplay loop>
+    <source src="lagu.mp3" type="audio/mpeg">
+    Browser kamu tidak mendukung audio.
+  </audio>
+
+</div>
+
+    <!-- BUTTON -->
+    <a
+      class="next-btn"
+      href="halaman5.html"
+    >
+      Lanjut → 💗
+    </a>
+
+
+    <div class="footer">
+      dibuat dengan sedikit cinta dan banyak rasa 🐹💗
+    </div>
+
+  </main>
+
+
+  <!-- =========================
+       AUTOPLAY MUSIC
+  ========================== -->
+
+  <script>
+
+    const music = document.getElementById("music");
+
+    // Mencoba memulai musik otomatis
+    window.addEventListener("load", () => {
+      music.play().catch(() => {
+        console.log(
+          "Autoplay diblokir browser. Musik akan berjalan setelah user berinteraksi."
+        );
+      });
+    });
+
+    // Jika autoplay diblokir,
+    // musik akan mulai ketika user menyentuh halaman.
+    document.addEventListener("click", () => {
+      music.play().catch(() => {});
+    }, { once: true });
+
+  </script>
+
+</body>
+</html>
